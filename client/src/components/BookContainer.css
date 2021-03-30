@@ -1,0 +1,16 @@
+.BookContainer {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: auto;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+  width: 70%;
+  margin: auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  border: 2px solid #eee;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px 4px grey;
+  padding: 16px;
+  text-align: center;
+  background-color: #eeeeee;
+}

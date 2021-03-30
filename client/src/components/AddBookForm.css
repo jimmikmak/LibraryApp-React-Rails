@@ -1,0 +1,13 @@
+.AddBookForm {
+  font-weight: 600;
+  font-size: 18px;
+  padding: 20px;
+  margin: 0 auto;
+  width: 0 auto;
+}
+
+.title,
+.author {
+  font-size: 20px;
+  padding: 10px;
+}
