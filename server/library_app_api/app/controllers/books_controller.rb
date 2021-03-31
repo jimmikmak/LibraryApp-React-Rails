@@ -1,21 +1,21 @@
 class BooksController < ApplicationController
   def index
-    render json: { name: 'index' }
+    render json: { type: 'index' }
   end
 
   def create
-    render json: { name: 'create' }
+    render json: { type: 'create' }
   end
 
   def show
-    render json: { name: 'show' }
+    render json: { type: 'show' }
   end
 
   def update
-    render json: { name: 'update' }
+    render json: { type: 'update' }
   end
 
   def destroy
-    render json: { name: 'destroy' }
+    render json: { type: 'destroy' }
   end
 end
