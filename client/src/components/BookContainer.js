@@ -33,7 +33,7 @@ const BookContainer = () => {
     newBooks.push(newBook);
     setBookList(newBooks);
 
-    fetch("http://localhost:9000/api/v1/books", {
+    fetch("http://localhost:3000/books", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
