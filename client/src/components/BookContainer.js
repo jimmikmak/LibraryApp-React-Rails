@@ -53,7 +53,7 @@ const BookContainer = () => {
     setBookList(newBooks);
     setBookEdit(false);
 
-    fetch(`http://localhost:9000/api/v1/books/${bookId._id}`, {
+    fetch(`http://localhost:3000/api/v1/books/${bookId._id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -76,7 +76,7 @@ const BookContainer = () => {
   const handleUpdateBook = (updatedBook) => {
     setBookEdit(false);
 
-    fetch(`http://localhost:9000/api/v1/books/${updatedBook._id}`, {
+    fetch(`http://localhost:3000/api/v1/books/${updatedBook._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -85,7 +85,7 @@ const BookContainer = () => {
     }).then((response) => {
       console.log("PUT response:", response);
     });
-    fetch("http://localhost:9000/api/v1/books", {
+    fetch("http://localhost:3000/api/v1/books", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -102,7 +102,7 @@ const BookContainer = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:9000/api/v1/books", {
+    fetch("http://localhost:3000/api/v1/books", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
