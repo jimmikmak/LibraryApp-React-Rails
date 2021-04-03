@@ -53,7 +53,7 @@ const BookContainer = () => {
     setBookList(newBooks);
     setBookEdit(false);
 
-    fetch(`http://localhost:3000/api/v1/books/${bookId._id}`, {
+    fetch(`http://localhost:3000/books`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -76,7 +76,7 @@ const BookContainer = () => {
   const handleUpdateBook = (updatedBook) => {
     setBookEdit(false);
 
-    fetch(`http://localhost:3000/api/v1/books/${updatedBook._id}`, {
+    fetch(`http://localhost:3000/books/update`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -85,7 +85,7 @@ const BookContainer = () => {
     }).then((response) => {
       console.log("PUT response:", response);
     });
-    fetch("http://localhost:3000/api/v1/books", {
+    fetch("http://localhost:3000/books/show", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -101,22 +101,22 @@ const BookContainer = () => {
       });
   };
 
-  useEffect(() => {
-    fetch("http://localhost:3000/api/v1/books", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        console.log("books response", response);
-        return response.json();
-      })
-      .then((bookData) => {
-        console.log("bookData:", bookData);
-        setBookList(bookData.data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:3000/books/index", {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   })
+  //     .then((response) => {
+  //       console.log("books response", response);
+  //       return response.json();
+  //     })
+  //     .then((bookData) => {
+  //       console.log("bookData:", bookData);
+  //       setBookList(bookData.data);
+  //     });
+  // }, []);
 
   return (
     <div className="BookContainer">
