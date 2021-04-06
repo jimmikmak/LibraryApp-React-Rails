@@ -9,7 +9,7 @@ const App = () => {
     <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route exact path="/books/create">
+          <Route exact path="/books">
             <BookContainer />
           </Route>
         </Switch>

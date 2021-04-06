@@ -53,7 +53,7 @@ const BookContainer = () => {
     setBookList(newBooks);
     setBookEdit(false);
 
-    fetch("http://localhost:3000/books/destroy/:id", {
+    fetch("http://localhost:3000/books/:id", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -76,7 +76,7 @@ const BookContainer = () => {
   const handleUpdateBook = (updatedBook) => {
     setBookEdit(false);
 
-    fetch(`http://localhost:3000/books/update`, {
+    fetch("http://localhost:3000/books/update", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
