@@ -76,7 +76,7 @@ const BookContainer = () => {
   const handleUpdateBook = (updatedBook) => {
     setBookEdit(false);
 
-    fetch("http://localhost:3000/books/update", {
+    fetch("http://localhost:3000/books/update/:id", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
